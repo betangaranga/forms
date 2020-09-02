@@ -7,7 +7,7 @@ export class Form extends Document {
     @Prop({default: moment().tz('America/Mexico_City').format('DD/MM/YYYY HH:mm')})
     created_at: string;
     @Prop()
-    id: number;
+    _id: number;
     @Prop({default: moment().tz('America/Mexico_City').format('DD/MM/YYYY HH:mm')})
     updated_at: string;
     @Prop({ required: true })

@@ -5,7 +5,11 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { FormsCreationModule } from './forms-creation/forms-creation.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/jobapp'),FormsCreationModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost/jobapp',
+  {
+    useFindAndModify: false
+  }
+  ),FormsCreationModule],
   controllers: [AppController],
   providers: [AppService],
 })

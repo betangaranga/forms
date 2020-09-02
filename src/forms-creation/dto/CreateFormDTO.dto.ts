@@ -37,7 +37,7 @@ export class CreateFormDTO {
     @IsNotEmptyObject()
     @IsObject()
     questions: QuestionDTO;
-    id: number;
+    _id: number;
     
 
     

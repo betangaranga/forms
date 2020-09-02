@@ -1,6 +1,8 @@
 import { Controller, Get, Body, Post, Put, Param, Delete } from '@nestjs/common';
 import { FormsCreationService } from './forms-creation.service';
 import { CreateFormDTO } from './dto/CreateFormDTO.dto'
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('Forms CRUD')
 @Controller('forms-creation')
 export class FormsCreationController {
     constructor(private formsCreationService: FormsCreationService) {}

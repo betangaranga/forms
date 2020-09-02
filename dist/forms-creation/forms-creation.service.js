@@ -21,9 +21,21 @@ let FormsCreationService = class FormsCreationService {
         this.formModel = formModel;
     }
     async createForm(data) {
-        data.id = await (await this.formModel.find({})).length + 1;
+        data.id = (await this.formModel.find({})).length + 1;
         const createdForm = new this.formModel(data);
         return createdForm.save();
+    }
+    async getForms() {
+        return this.formModel.find().exec();
+    }
+    async updateForm(formId, data) {
+        const updatedForm = await this.formModel
+            .findByIdAndUpdate(formId, data, { new: true });
+        return updatedForm;
+    }
+    async deleteForm(formId) {
+        const deletedForm = await this.formModel.findByIdAndRemove(formId);
+        return deletedForm;
     }
 };
 FormsCreationService = __decorate([

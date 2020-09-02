@@ -18,11 +18,11 @@ class CreateFormDTO {
 }
 __decorate([
     swagger_1.ApiProperty(),
-    __metadata("design:type", Date)
+    __metadata("design:type", String)
 ], CreateFormDTO.prototype, "created_at", void 0);
 __decorate([
     swagger_1.ApiProperty(),
-    __metadata("design:type", Date)
+    __metadata("design:type", String)
 ], CreateFormDTO.prototype, "updated_at", void 0);
 __decorate([
     swagger_1.ApiProperty(),

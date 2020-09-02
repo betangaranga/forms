@@ -20,17 +20,26 @@ let FormsCreationController = class FormsCreationController {
     constructor(formsCreationService) {
         this.formsCreationService = formsCreationService;
     }
-    getForm(data) {
+    createForm(data) {
         return this.formsCreationService.createForm(data);
+    }
+    getForms() {
+        return this.formsCreationService.getForms();
     }
 };
 __decorate([
-    common_1.Get(),
+    common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [CreateFormDTO_dto_1.CreateFormDTO]),
     __metadata("design:returntype", void 0)
-], FormsCreationController.prototype, "getForm", null);
+], FormsCreationController.prototype, "createForm", null);
+__decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FormsCreationController.prototype, "getForms", null);
 FormsCreationController = __decorate([
     common_1.Controller('forms-creation'),
     __metadata("design:paramtypes", [forms_creation_service_1.FormsCreationService])

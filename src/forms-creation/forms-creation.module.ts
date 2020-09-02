@@ -2,11 +2,10 @@ import { Module } from '@nestjs/common';
 import { FormsCreationController } from './forms-creation.controller';
 import { FormsCreationService } from './forms-creation.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import * as AutoIncrementFactory from 'mongoose-sequence';
-import { FormSchema } from 'src/forms-creation/schemas/forms.schema';
+import { FormCreationSchema } from 'src/forms-creation/schemas/forms.schema';
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: 'Form', schema: FormSchema }])],
+    imports: [MongooseModule.forFeature([{ name: 'Form', schema: FormCreationSchema }])],
     controllers: [FormsCreationController],
     providers: [FormsCreationService],
   })

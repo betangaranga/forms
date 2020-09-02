@@ -6,9 +6,9 @@ import { Type } from 'class-transformer';
 
 export class CreateFormDTO {
     @ApiProperty()
-    created_at: Date;
+    created_at: string;
     @ApiProperty()
-    updated_at: Date;
+    updated_at: string;
     @ApiProperty()
     @IsDefined()
     @IsString()

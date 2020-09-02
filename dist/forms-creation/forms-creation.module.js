@@ -16,7 +16,7 @@ let FormsCreationModule = class FormsCreationModule {
 };
 FormsCreationModule = __decorate([
     common_1.Module({
-        imports: [mongoose_1.MongooseModule.forFeature([{ name: 'Form', schema: forms_schema_1.FormSchema }])],
+        imports: [mongoose_1.MongooseModule.forFeature([{ name: 'Form', schema: forms_schema_1.FormCreationSchema }])],
         controllers: [forms_creation_controller_1.FormsCreationController],
         providers: [forms_creation_service_1.FormsCreationService],
     })

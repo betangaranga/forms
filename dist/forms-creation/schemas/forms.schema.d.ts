@@ -1,8 +1,8 @@
 import { Document } from 'mongoose';
 export declare class Form extends Document {
-    created_at: Date;
+    created_at: string;
     id: number;
-    updated_at: Date;
+    updated_at: string;
     title: string;
     enterprise_id: number;
     status: boolean;
@@ -13,4 +13,4 @@ export declare class Form extends Document {
     of_system: boolean;
     questions: {};
 }
-export declare const FormSchema: import("mongoose").Schema<any>;
+export declare const FormCreationSchema: import("mongoose").Schema<any>;

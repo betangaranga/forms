@@ -9,22 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FormSchema = exports.Form = void 0;
+exports.FormCreationSchema = exports.Form = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
+const moment = require("moment-timezone");
 let Form = class Form extends mongoose_2.Document {
 };
 __decorate([
-    mongoose_1.Prop(),
-    __metadata("design:type", Date)
+    mongoose_1.Prop({ default: moment().tz('America/Mexico_City').format('DD/MM/YYYY HH:mm') }),
+    __metadata("design:type", String)
 ], Form.prototype, "created_at", void 0);
 __decorate([
     mongoose_1.Prop(),
     __metadata("design:type", Number)
 ], Form.prototype, "id", void 0);
 __decorate([
-    mongoose_1.Prop(),
-    __metadata("design:type", Date)
+    mongoose_1.Prop({ default: moment().tz('America/Mexico_City').format('DD/MM/YYYY HH:mm') }),
+    __metadata("design:type", String)
 ], Form.prototype, "updated_at", void 0);
 __decorate([
     mongoose_1.Prop({ required: true }),
@@ -39,7 +40,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Form.prototype, "status", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    mongoose_1.Prop(),
     __metadata("design:type", String)
 ], Form.prototype, "creation_user", void 0);
 __decorate([
@@ -66,5 +67,5 @@ Form = __decorate([
     mongoose_1.Schema()
 ], Form);
 exports.Form = Form;
-exports.FormSchema = mongoose_1.SchemaFactory.createForClass(Form);
+exports.FormCreationSchema = mongoose_1.SchemaFactory.createForClass(Form);
 //# sourceMappingURL=forms.schema.js.map

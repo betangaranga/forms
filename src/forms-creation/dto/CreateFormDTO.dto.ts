@@ -21,9 +21,9 @@ export class CreateFormDTO {
     @ApiProperty()
     @IsDefined()
     @IsNumber()
-    creation_user: string;
+    creation_user: number;
     @ApiProperty()
-    update_user: string;
+    update_user: number;
     @ApiProperty()
     active: boolean;
     @ApiProperty()

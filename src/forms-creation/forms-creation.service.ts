@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateFormDTO } from './dto/CreateFormDTO.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Form } from './schemas/forms.schema'
+import { Form } from './schemas/form.schema'
 import * as moment from 'moment-timezone';
 
 

@@ -17,9 +17,9 @@ export class Form extends Document {
     @Prop()
     status: boolean;
     @Prop()
-    creation_user: string;
+    creation_user: number;
     @Prop()
-    update_user: string;
+    update_user: number;
     @Prop()
     active: boolean;
     @Prop()

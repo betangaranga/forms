@@ -6,7 +6,7 @@ import { FormsCreationModule } from './forms-creation/forms-creation.module';
 import * as dotenv from 'dotenv';
 dotenv.config();
 @Module({
-  imports: [MongooseModule.forRoot(`${process.env.DATABASE_PROVIDER}://${process.env.DATABASE_HOST}/${process.env.DATABASE_NAME}`,
+  imports: [MongooseModule.forRoot(`${process.env.NOSQLDATABASE_PROVIDER}://${process.env.NOSQLDATABASE_HOST}/${process.env.NOSQLDATABASE_NAME}`,
   {
     useFindAndModify: false
   }

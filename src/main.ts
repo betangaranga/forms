@@ -4,6 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { ValidationPipe } from '@nestjs/common';
 import * as compression from 'compression';
 import * as dotenv from 'dotenv';
+import { AuthGuard } from './guards/auth.guard';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
 		logger: ['error', 'warn', 'log', 'debug', 'verbose'],
@@ -21,6 +22,7 @@ async function bootstrap() {
 	app.setGlobalPrefix('api');
   const document = SwaggerModule.createDocument(app, options);
   app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalGuards(new AuthGuard());
   SwaggerModule.setup('api', app, document);
   await app.listen(process.env.PORT);
 }

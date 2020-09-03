@@ -1,11 +1,11 @@
-import { Controller, Get, Body, Post, Put, Param, Delete, Headers, UseGuards } from '@nestjs/common';
+import { Controller, Get, Body, Post, Put, Param, Delete, UseGuards } from '@nestjs/common';
 import { FormsCreationService } from './forms-creation.service';
 import { CreateFormDTO } from './dto/CreateFormDTO.dto'
 import { ApiTags } from '@nestjs/swagger';
-import { AuthGuard } from 'src/guards/auth.guard';
+//import { AuthGuard } from 'src/guards/auth.guard';
 @ApiTags('Forms CRUD')
 @Controller('forms-creation')
-@UseGuards(AuthGuard)
+//@UseGuards(AuthGuard)
 export class FormsCreationController {
     constructor(private formsCreationService: FormsCreationService) {}
     @Post()

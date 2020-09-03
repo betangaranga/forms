@@ -25,6 +25,11 @@ export class TokenValidationService {
               type: QueryTypes.SELECT
             }
           );
-        return Object.values(code[0])[0];
+          if(Object.values(code[0])[0]>0){
+              return true;
+          }
+          else{
+              return false;
+          }
     }
 }
